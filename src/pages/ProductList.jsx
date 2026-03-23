@@ -1,4 +1,5 @@
 import { useProducts } from "../hooks/useProducts";
+import ProductCard from "../components/ProductCard";
 
 export default function ProductList() {
     const { products, loading, error } = useProducts();
@@ -9,8 +10,9 @@ export default function ProductList() {
 
     return (
         <div>
-            <ul>{products.map(p => <li key={p.id}>{p.name}</li>)}</ul>
+            {products.map((product) => (
+                 <ProductCard product={product} />
+            ))}
         </div>
     )
-
 }
