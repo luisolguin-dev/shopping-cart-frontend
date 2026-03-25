@@ -1,7 +1,7 @@
 import { useProducts } from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
 
-export default function ProductList() {
+export function ProductList() {
     const { products, loading, error } = useProducts();
 
     if (loading) return <p>Loading...</p>;
