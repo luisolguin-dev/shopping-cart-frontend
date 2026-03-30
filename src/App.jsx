@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/react';
-import ProductList from './pages/ProductList';
+import { ProductList } from './pages/ProductList';
 
 function App() {
   return (
