@@ -1,4 +1,7 @@
+import { useCart } from "../hooks/useCart";
+
 export default function ProductCard({product}) {
+  const { addItem } = useCart();
     return (
         <div>
           <div>
@@ -6,7 +9,7 @@ export default function ProductCard({product}) {
           </div>
           <div>
             <p>{product.price}</p>
-            <button>Add to Cart</button>
+            <button onClick={() => addItem(product)}>Add to Cart</button>
           </div>
         </div>
     )

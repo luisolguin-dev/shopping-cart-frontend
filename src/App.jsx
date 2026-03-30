@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/react';
 import { ProductList } from './pages/ProductList';
+import { CartSummary } from './pages/CartSummary';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
      <Routes> 
       <Route path='/' element={<ProductList />}/>
+      <Route path='/cart' element={<CartSummary />}/>
      </Routes>
     </BrowserRouter>
     </>
